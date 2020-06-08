@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Numero :
+    <input type="text" name="num1" id="num1"/><br>
+
+    <p id="entero"> </p>
+</body>
+<script>
+    function buscar(){
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = 20;
+        var num3 = 100;
+        var num4 = 400;
+        if(num1 >= num2 && num1 <= num3){
+            document.getElementById("entero").innerHTML = " " + num1 + " se encuentra en el rango de " + num2 + " y " + num3;
+        }
+        else if(num1 >= num3 && num1 <= num4){
+            document.getElementById("entero").innerHTML = " " + num1 + " se encuentra en el rango de " + num3 + " y " + num4;
+        }
+        else {
+            document.getElementById("entero").innerHTML = "El numero  " + num1 + " no se encuentra dentro de los rangos disponibles de "+ num2 + " y " + num4;
+        }
+
+    }
+</script>
+<button onclick="buscar()">Calcular</button>
+ 
+    
+</html>
